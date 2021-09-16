@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch Solution",
+            "request": "launch",
+            "mainClass": "Solution",
+            "projectName": "algorithm-stone_960e3335"
+        },
+        {
             "name": "query",
             "type": "python",
             "request": "launch",
@@ -25,7 +32,11 @@
             "console": "integratedTerminal",
             "cwd": "${workspaceFolder}/animations",
             "module": "manimlib",
-            "args": ["measure_scene.py", "MeasureScene", "-w"]
+            "args": [
+                "measure_scene.py",
+                "MeasureScene",
+                "-w"
+            ]
         },
         {
             "name": "merge",
@@ -33,7 +44,7 @@
             "request": "launch",
             "console": "integratedTerminal",
             "cwd": "${workspaceFolder}/animations",
-            "program": "merge_videos.py",
+            "program": "merge_videos.py"
         }
     ]
 }
