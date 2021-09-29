@@ -1540,6 +1540,10 @@
      </text>
     </a>
    </g>
+   <g transform="translate(785.0, -330.0) scale(0.3)">
+    <circle cx="24" cy="24" fill="#4caf50" r="21"/>
+    <polygon fill="#ccff90" points="34.6,14.6 21,28.2 15.4,22.6 12.6,25.4 21,33.8 37.4,17.4"/>
+   </g>
   </g>
   <!-- 894&#45;&gt;998 -->
   <g class="edge" id="edge54">
@@ -1562,6 +1566,10 @@
      </text>
     </a>
    </g>
+   <g transform="translate(812.5, -258.0) scale(0.3)">
+    <circle cx="24" cy="24" fill="#4caf50" r="21"/>
+    <polygon fill="#ccff90" points="34.6,14.6 21,28.2 15.4,22.6 12.6,25.4 21,33.8 37.4,17.4"/>
+   </g>
   </g>
   <!-- 998&#45;&gt;1130 -->
   <g class="edge" id="edge55">
@@ -1583,6 +1591,10 @@
       1261. 在受污染的二叉树中查找元素
      </text>
     </a>
+   </g>
+   <g transform="translate(830.5, -186.0) scale(0.3)">
+    <circle cx="24" cy="24" fill="#4caf50" r="21"/>
+    <polygon fill="#ccff90" points="34.6,14.6 21,28.2 15.4,22.6 12.6,25.4 21,33.8 37.4,17.4"/>
    </g>
   </g>
   <!-- 1130&#45;&gt;1261 -->
