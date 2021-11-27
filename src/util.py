@@ -1,3 +1,5 @@
+# -*-coding:utf-8 -*-
+
 from graphviz import Digraph
 import os
 from pathlib import Path

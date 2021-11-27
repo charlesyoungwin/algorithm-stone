@@ -1,9 +1,3 @@
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.Queue;
-
-import javax.swing.tree.TreeNode;
-
 /*
  * @lc app=leetcode.cn id=449 lang=java
  *
@@ -24,6 +18,9 @@ public class Codec {
 
     // Encodes a tree to a single string.
     public String serialize(TreeNode root) {
+        if (root == null) {
+            return "";
+        }
         StringBuilder sb = new StringBuilder();
         serializeHelper(root, sb);
         if (sb.length() > 0) {
@@ -34,9 +31,11 @@ public class Codec {
 
     // Decodes your encoded data to tree.
     public TreeNode deserialize(String data) {
+        if (data == null || data.length() == 0) {
+            return null;
+        }
         String[] strs = data.split(",");
-        Queue<String> queue = new LinkedList<>(Arrays.asList(strs));
-        return deserializeHelper(queue, Integer.MIN_VALUE, Integer.MAX_VALUE);
+        return deserializeHelper(strs, 0, strs.length - 1);
     }
 
     public void serializeHelper(TreeNode root, StringBuilder sb) {
@@ -48,18 +47,21 @@ public class Codec {
         serializeHelper(root.right, sb);
     }
 
-    public TreeNode deserializeHelper(Queue<String> queue, int low, int high) {
-        if (queue.isEmpty()) {
+    public TreeNode deserializeHelper(String[] strs, int low, int high) {
+        if (low > high) {
             return null;
         }
-        String str = queue.poll();
-        int val = Integer.parseInt(str);
-        if (val < low || val > high) {
-            return null;
-        }
+        int val = Integer.parseInt(strs[low]);
         TreeNode root = new TreeNode(val);
-        root.left = deserializeHelper(queue, low, val);
-        root.right = deserializeHelper(queue, val, high);
+        int index = high + 1;
+        for (int i = low + 1; i <= high; i++) {
+            if (Integer.parseInt(strs[i]) > root.val) {
+                index = i;
+                break;
+            }
+        }
+        root.left = deserializeHelper(strs, low + 1, index - 1);
+        root.right = deserializeHelper(strs, index, high);
         return root;
     }
 }

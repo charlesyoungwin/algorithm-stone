@@ -1,3 +1,4 @@
+# -*-coding:utf-8 -*-
 from graphviz import Digraph
 import re
 import theme
